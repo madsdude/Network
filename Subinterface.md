@@ -26,3 +26,4 @@ exit
 interface gigabitEthernet 0/1.100
 
 exit
+```
