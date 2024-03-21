@@ -1,5 +1,20 @@
 # Subinterface
 
+##### Subinterface refererer til et koncept inden for netværkskonfiguration og programmering, hvor et enkelt fysisk interface kan deles op i flere logiske interfaces. Dette gør det muligt for netværksadministratorer og udviklere at anvende forskellige konfigurationer og politikker for forskellige typer trafik på det samme fysiske interface. Et subinterface opfører sig som et uafhængigt interface, hvilket giver fleksibilitet i netværksdesign og -administration.
+
+##### I netværksverdenen bruges subinterfaces ofte i forbindelse med VLAN (Virtual Local Area Network) tagging og routingprotokoller. For eksempel, i et scenario hvor et enkelt fysisk interface på en router forbinder til et switch, kan subinterfaces konfigureres til at høre til forskellige VLAN'er. Dette tillader data fra forskellige VLAN'er at rejse gennem det samme fysiske interface, men stadig forblive logisk adskilt, hvilket effektiviserer brugen af hardware og simplificerer netværksstrukturen.
+
+##### Subinterfaces er også nyttige i MPLS (Multiprotocol Label Switching) netværk, hvor forskellige labels kan blive tildelt til subinterfaces for at styre trafikken mere effektivt. Desuden kan de anvendes i VPN (Virtual Private Network) scenarier for at adskille trafik mellem forskellige kunder eller afdelinger.
+
+##### Sammendraget er, at subinterfaces tilbyder en metode til at øge netværkets fleksibilitet og effektivitet ved at tillade flere logiske netværk at køre over det samme fysiske netværksinterface, hvilket gør dem uundværlige i komplekse netværksdesign og -konfigurationer.
+
+
+
+
+
+
+
+
 ```.cisco
 Conf t
 
