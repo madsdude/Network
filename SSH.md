@@ -1,6 +1,5 @@
 # SSH
 ```.Cisco
-
 conf t
 ip domain-name virkom.local
 crypto key generate rsa
