@@ -1,6 +1,6 @@
 # Subinterface
 
-```cisco
+```c++
 Conf t
 
 interface gigabitEthernet 0/1.10
