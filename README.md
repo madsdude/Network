@@ -5,7 +5,6 @@
 It's focused on Cisco configurations and brief explanations.
 
 
-[#Subinterface](Subinterface)
 *  SSH
 *  NAT
 *  Vlan's
@@ -13,3 +12,6 @@ It's focused on Cisco configurations and brief explanations.
 *  IPses/VPN
 *  HSRP
 *  DHCP
+*  OSPF
+*  DHCP
+*  Subinterface
