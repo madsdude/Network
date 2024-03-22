@@ -2,6 +2,18 @@
 
 ## Denne kode er en konfiguration for en DHCP-server på en netværksenhed, såsom en router eller en switch, der kører Cisco IOS software. DHCP, som står for Dynamic Host Configuration Protocol, er et netværksprotokol, der bruges til at automatisk tildele IP-adresser og anden netværkskonfigurationsinformation til enheder på et netværk, så brugere ikke manuelt skal konfigurere disse indstillinger på deres enheder.
 
+```.Cisco
+
+conf t
+
+ip dhcp pool Test1
+network 192.168.0.0 255.255.255.0
+default-router 192.168.0.1
+dns-server 192.168.0.1
+lease 30
+
+```
+
 ### Lad os bryde koden ned:
 
 ##### 1. conf t: Dette er en forkortelse for "configure terminal". Det er en kommando, der bringer dig ind i den globale konfigurationstilstand på enheden, hvor du kan foretage ændringer i enhedens konfiguration.
@@ -17,17 +29,3 @@
 ##### 6. lease 30: Denne kommando angiver varigheden af lejemålet for en IP-adresse i dage. Efter denne periode skal enheden forny sin DHCP-lejemål for at fortsætte med at bruge IP-adressen. I dette tilfælde er lejeperioden sat til 30 dage.
 
 ##### Samlet set konfigurerer denne kode en DHCP-server til automatisk at tildele IP-adresser, en standard gateway, og en DNS-serveradresse til enheder, der forbinder til netværket, med en IP-adresse lejemål på 30 dage.
-
-
-
-```.Cisco
-
-conf t
-
-ip dhcp pool Test1
-network 192.168.0.0 255.255.255.0
-default-router 192.168.0.1
-dns-server 192.168.0.1
-lease 30
-
-```
