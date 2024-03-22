@@ -5,7 +5,7 @@
 It's focused on Cisco configurations and brief explanations.
 
 
-*  [#Subinterface](Subinterface)
+[#Subinterface](Subinterface)
 *  SSH
 *  NAT
 *  Vlan's
