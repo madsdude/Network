@@ -1,6 +1,9 @@
 # Network
 
-Networks notes
+### Repository for networking notes
+
+It's focused on Cisco configurations and brief explanations.
+
 
 *  Subinterface
 *  SSH
