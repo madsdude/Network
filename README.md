@@ -4,14 +4,13 @@
 
 It's focused on Cisco configurations and brief explanations.
 
-[ssh](SSH.md)
-*  SSH
-*  NAT
-*  Vlan's
-*  LACP
-*  IPses/VPN
-*  HSRP
-*  DHCP
-*  OSPF
-*  DHCP
-*  Subinterface
+*  [SSH](SSH.md)
+*  [NAT](NAT.md)
+*  [Vlan's](Vlans.md)
+*  [LACP](LACP.md)
+*  [IPSES/VPN](IPses-VPN.md)
+*  [OSPF](OSPF.md)
+*  [DHCP](DHCP.md)
+*  [HSRP](HSRP.md)
+*  [Subinterface](Subinterface.md)
+
