@@ -22,12 +22,54 @@ configure terminal
 
 <p> For at konfigurere VTP skal du bruge følgende trin: </p>
 
-<p> Indstil VTP-domæne:  </p>
+<h3> Indstil VTP-domæne:  </h3>
 <p> Dette er navnet på dit VTP-domæne. Alle switches i samme domæne vil dele VLAN-information. </p>
 
 ```
 vtp domain [Domenenavn]
 ```
 
-<p> Indstil VTP-tilstand </p>
+<h3> Indstil VTP-version </h3>
+
+<p> Sørg for, at VTP-versionen på klienten er den samme som på serveren. Standardversionen er normalt version 2, men du kan også indstille den til version 1 eller 3, afhængig af din netværksopsætning. </p>
+
+```
+vtp version 1
+```
+<p> Version 1 er det nemmest til at start med </p>
+
+<h3> Indstil VTP-tilstand </h3>
+
+<p> Der er tre VTP-tilstande: server, client, og transparent. Vælg den tilstand, der passer til dit netværk. </p>
+
+<p> Server-tilstand (standardtilstand, tillader oprettelse og ændring af VLANs):  </p>
+
+```
+vtp mode server
+```
+
+<p> Client-tilstand (modtager og anvender VLAN-oplysninger fra en VTP-server): </p>
+
+```
+vtp mode client
+```
+
+<p> Transparent-tilstand (videresender VTP-oplysninger uden at ændre dem og opretholder lokale VLANs): </p>
+
+```
+vtp mode transparent
+```
+
+<h3> Indstil VTP-adgangskode (valgfrit): </h3>
+
+<p> Hvis du vil bruge en adgangskode til at sikre VTP-oplysninger, kan du indstille en sådan: </p>
+
+```
+vtp password [Adgangskode]
+```
+
+
+
+
+
 
