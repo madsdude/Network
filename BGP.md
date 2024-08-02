@@ -1,1 +1,1 @@
-
+<h1> BGP står for Border Gateway Protocol og er en standardiseret gateway-protokol, der bruges til at udveksle routing-information mellem forskellige autonome systemer (AS) på internettet. Her er en kort forklaring: </h1>
