@@ -15,3 +15,7 @@ eBGP (External BGP): Bruges til at udveksle routing-information mellem forskelli
 iBGP (Internal BGP): Bruges inden for et enkelt autonomt system for at sikre konsistent routing-information mellem alle routere i systemet.
 Stabilitet og sikkerhed: BGP er designet til at være robust og stabil, men det kan være sårbart over for visse typer af angreb og fejlkonfigurationer, hvilket kan føre til routingproblemer som f.eks. route hijacking eller blackholing.
 </p>
+
+<H2> Opsummering </H2>
+<p> BGP er afgørende for internettets funktion, da det sikrer, at data kan rejse mellem forskellige netværk på den mest effektive måde. Det håndterer kompleks routing mellem store netværk og er en grundpille i internettets arkitektur.
+</p>
