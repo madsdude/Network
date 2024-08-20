@@ -68,6 +68,11 @@ vtp mode transparent
 vtp password [Adgangskode]
 ```
 
+<h3> EXTER </h3>
+
+```
+vtp status 
+```
 
 
 
