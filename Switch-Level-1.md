@@ -10,4 +10,7 @@ Switch(config)# hostname switch
 Switch(config)# interface vlan 99
 Switch(config-if)# ip addresss xxx.xxx.xxx.xxx
 
+conf t
+ip route 0.0.0.0 0.0.0.0 xxx.xxx.xxx.xxx
+
 ```
