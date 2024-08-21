@@ -7,7 +7,7 @@ Switch# configure terminal
 
 Switch(config)# hostname switch
 
-Switch(config)# interface vlan 99
+Switch(config)# interface vlan 1
 Switch(config-if)# ip addresss xxx.xxx.xxx.xxx
 
 conf t
