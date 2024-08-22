@@ -16,9 +16,17 @@ R1(config-if)#description "LAN PORT"
 
 ```
 R1#conf t
-R1(config)#banner motd #TEST#
+R1(config)#banner motd TEST
 R1(config)#banner login 
 R1#show banner ?
 
 ```
+
+
+```
+conf t
+hostname #router navn#
+
+```
+
 
