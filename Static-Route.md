@@ -24,7 +24,6 @@
 
 ```
 Router(config)# ip route 192.168.2.0 255.255.255.0 192.168.1.2
-
 ````
 <p> Forklaring: </p>
 
@@ -55,7 +54,6 @@ Router(config)# ip route 0.0.0.0 0.0.0.0 192.168.1.254
 
 ```
 Router(config)# ip route 192.168.3.0 255.255.255.0 FastEthernet0/1
-
 ```
 <p> Dette fortæller routeren at sende trafik til 192.168.3.0/24 direkte ud af interface FastEthernet0/1. </p>
 
@@ -65,7 +63,6 @@ Router(config)# ip route 192.168.3.0 255.255.255.0 FastEthernet0/1
 
 ```
 Router# show ip route
-
 ```
 <p> Dette vil vise alle de ruter, routeren kender, inklusive de statiske ruter, du har konfigureret. </p>
 
