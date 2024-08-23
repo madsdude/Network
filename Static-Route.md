@@ -1,71 +1,63 @@
-<p>  En static route er en manuel indtastning af en rute i en router eller switch, der fortæller enheden, hvilken vej en pakke skal tage for at nå et bestemt netværk. I modsætning til dynamiske routing-protokoller, som automatisk finder og opdaterer ruter, forbliver statiske ruter konstant, indtil de manuelt ændres eller slettes. Static routes er nyttige i mindre netværk eller til specifikke opgaver, hvor ruten skal være forudsigelig og ikke ændre sig dynamisk. </p>
+<h1>Static Route Forklaring med Eksempler</h1>
+  <p>En <strong>static route</strong> er en manuel indtastning af en rute i en router eller switch, der fortæller enheden, hvilken vej en pakke skal tage for at nå et bestemt netværk. I modsætning til dynamiske routing-protokoller, som automatisk finder og opdaterer ruter, forbliver statiske ruter konstant, indtil de manuelt ændres eller slettes. Static routes er nyttige i mindre netværk eller til specifikke opgaver, hvor ruten skal være forudsigelig og ikke ændre sig dynamisk.</p>
+    
+  <h2>Grundlæggende Konfiguration af en Static Route</h2>
+    <p>Lad os sige, at du har to netværk:</p>
+    <ul>
+        <li>Netværk A: <code>192.168.1.0/24</code></li>
+        <li>Netværk B: <code>192.168.2.0/24</code></li>
+    </ul>
+    <p>Routeren, der forbinder de to netværk, har to interfaces:</p>
+    <ul>
+        <li>Interface FastEthernet 0/0 (Fa0/0) er tilsluttet Netværk A med IP-adressen <code>192.168.1.1</code>.</li>
+        <li>Interface FastEthernet 0/1 (Fa0/1) er tilsluttet Netværk B med IP-adressen <code>192.168.2.1</code>.</li>
+    </ul>
 
-<h1> Grundlæggende konfiguration af en static route </h1>
+  <h2>Opsætning af en Static Route</h2>
+    <p>For at sikre, at routeren ved, hvordan man sender trafik fra Netværk A til Netværk B, kan du konfigurere en static route.</p>
 
-<p> Lad os sige, at du har to netværk: </p>
-<ol></ol>
- <li>Netværk A: 192.168.1.0/24</li>
- <li>Netværk B: 192.168.2.0/24 </li>
-</ol>
+  <h3>Eksempel på Cisco kode:</h3>
+    <pre><code>Router(config)# ip route 192.168.2.0 255.255.255.0 192.168.1.2</code></pre>
+    
+   <h4>Forklaring:</h4>
+    <ul>
+        <li><strong>ip route</strong>: Dette er kommandoen til at definere en static route.</li>
+        <li><strong>192.168.2.0</strong>: Dette er destinationsnetværket.</li>
+        <li><strong>255.255.255.0</strong>: Dette er subnetmasken for destinationsnetværket.</li>
+        <li><strong>192.168.1.2</strong>: Dette er next-hop IP-adressen, dvs. IP-adressen på den næste router, der skal modtage pakken for at nå destinationsnetværket.</li>
+    </ul>
 
-<p></p>
+   <h3>Flere Eksempler:</h3>
+    <h4>1. Standard Route (Default Route):</h4>
+    <p>En standardroute bruges til at sende pakker, hvis der ikke er nogen specifik rute defineret for destinationsnetværket. Dette er nyttigt til at videresende trafik til en gateway, som kan håndtere videre routing.</p>
+    <pre><code>Router(config)# ip route 0.0.0.0 0.0.0.0 192.168.1.254</code></pre>
+    <p>Her angiver <code>0.0.0.0 0.0.0.0</code>, at enhver destination, der ikke allerede har en specifik rute, skal sendes til <code>192.168.1.254</code>, som normalt vil være en gateway eller en anden router.</p>
 
-<p> Routeren, der forbinder de to netværk, har to interfaces: </p>
+  <h4>2. Rute via Interface:</h4>
+    <p>I stedet for at angive en next-hop IP-adresse, kan du også pege på et direkte tilsluttet interface:</p>
+    <pre><code>Router(config)# ip route 192.168.3.0 255.255.255.0 FastEthernet0/1</code></pre>
+    <p>Dette fortæller routeren at sende trafik til 192.168.3.0/24 direkte ud af interface <code>FastEthernet0/1</code>.</p>
 
-<p> Interface FastEthernet 0/0 (Fa0/0) er tilsluttet Netværk A med IP-adressen 192.168.1.1 </p>
+   <h2>Kontrollér Konfigurationen</h2>
+    <p>Du kan kontrollere, om dine static routes er konfigureret korrekt med kommandoen:</p>
+    <pre><code>Router# show ip route</code></pre>
+    <p>Dette vil vise alle de ruter, routeren kender, inklusive de statiske ruter, du har konfigureret.</p>
 
-<p> Interface FastEthernet 0/1 (Fa0/1) er tilsluttet Netværk B med IP-adressen 192.168.2.1 </p>
-
-<h2> Opsætning af en static route </h2>
-
-<p> For at sikre, at routeren ved, hvordan man sender trafik fra Netværk A til Netværk B, kan du konfigurere en static route. </p>
-
-<p> Eksempel på Cisco kode: </p>
-
-```
-Router(config)# ip route 192.168.2.0 255.255.255.0 192.168.1.2
-````
-<p> Forklaring: </p>
-
-<ol> 
-<li> ip route: Dette er kommandoen til at definere en static route. </li>
-<li> 192.168.2.0: Dette er destinationsnetværket. </li>
-<li> 255.255.255.0: Dette er subnetmasken for destinationsnetværket. </li>
-<li> 192.168.1.2: Dette er next-hop IP-adressen, dvs. IP-adressen på den næste router, der skal modtage pakken for at nå destinationsnetværket.
- </li>
-</ol>
-
-<h2> Flere eksempler: </h2>
-
-<h3> Standard Route (Default Route): </h3>
-
-<p> En standardroute bruges til at sende pakker, hvis der ikke er nogen specifik rute defineret for destinationsnetværket. Dette er nyttigt til at videresende trafik til en gateway, som kan håndtere videre routing. </p>
-
-```
-Router(config)# ip route 0.0.0.0 0.0.0.0 192.168.1.254
-```
-
-<p> Her angiver 0.0.0.0 0.0.0.0, at enhver destination, der ikke allerede har en specifik rute, skal  </p>
-<p> sendes til 192.168.1.254, som normalt vil være en gateway eller en anden router. </p>
-
-<h3> Rute via Interface: </h3>
-
-<p> I stedet for at angive en next-hop IP-adresse, kan du også pege på et direkte tilsluttet interface: </p>
-
-```
-Router(config)# ip route 192.168.3.0 255.255.255.0 FastEthernet0/1
-```
-<p> Dette fortæller routeren at sende trafik til 192.168.3.0/24 direkte ud af interface FastEthernet0/1. </p>
-
-<h2> Kontrollér konfigurationen </h2>
-
-<p> Du kan kontrollere, om dine static routes er konfigureret korrekt med kommandoen: </p>
-
-```
-Router# show ip route
-```
-<p> Dette vil vise alle de ruter, routeren kender, inklusive de statiske ruter, du har konfigureret. </p>
-
-<p> </p>
-<h></h>
-
+   <h2>Fordele og Ulemper ved Static Routes</h2>
+    <ul>
+        <li><strong>Fordele:</strong>
+            <ul>
+                <li><strong>Forudsigelighed:</strong> Ruterne ændrer sig ikke, medmindre du manuelt ændrer dem.</li>
+                <li><strong>Lav belastning:</strong> Static routes kræver ingen beregninger, så de belaster ikke routerens CPU.</li>
+            </ul>
+        </li>
+        <li><strong>Ulemper:</strong>
+            <ul>
+                <li><strong>Mangel på skalerbarhed:</strong> Det er upraktisk i større netværk, hvor dynamiske routing-protokoller er mere effektive.</li>
+                <li><strong>Manglende failover:</strong> Hvis en link går ned, skal ruten manuelt opdateres, medmindre du bruger flere ruter til redundans.</li>
+            </ul>
+        </li>
+    </ul>
+    <p>Static routes er nyttige i mindre netværk, til simple routing-scenarier, eller som backup-ruter i mere komplekse netværk. De giver kontrol og stabilitet, men kræver manuel opsætning og vedligeholdelse.</p>
+</body>
+</html>
