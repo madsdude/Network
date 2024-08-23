@@ -24,7 +24,15 @@
 Router(config)# ip route 192.168.2.0 255.255.255.0 192.168.1.2
 
 ````
+<p> Forklaring: </p>
 
+<ol> 
+<li> ip route: Dette er kommandoen til at definere en static route. </li>
+<li> 192.168.2.0: Dette er destinationsnetværket. </li>
+<li> 255.255.255.0: Dette er subnetmasken for destinationsnetværket. </li>
+<li> 192.168.1.2: Dette er next-hop IP-adressen, dvs. IP-adressen på den næste router, der skal modtage pakken for at nå destinationsnetværket.
+ </li>
+</ol>
 
 <p> </p>
 <h></h>
