@@ -14,6 +14,16 @@
 
 <p> Interface FastEthernet 0/1 (Fa0/1) er tilsluttet Netværk B med IP-adressen 192.168.2.1 </p>
 
+<h2> Opsætning af en static route </h2>
+
+<p> For at sikre, at routeren ved, hvordan man sender trafik fra Netværk A til Netværk B, kan du konfigurere en static route. </p>
+
+<p> Eksempel på Cisco kode: </p>
+
+```
+Router(config)# ip route 192.168.2.0 255.255.255.0 192.168.1.2
+
+````
 
 
 <p> </p>
