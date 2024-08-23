@@ -8,6 +8,14 @@
 
 <p> Netværk B: 192.168.2.0/24 </p>
 
+<p> Routeren, der forbinder de to netværk, har to interfaces: </p>
+
+<p> Interface FastEthernet 0/0 (Fa0/0) er tilsluttet Netværk A med IP-adressen 192.168.1.1 </p>
+
+<p> Interface FastEthernet 0/1 (Fa0/1) er tilsluttet Netværk B med IP-adressen 192.168.2.1 </p>
+
+
+
 <p> </p>
 <h></h>
 
