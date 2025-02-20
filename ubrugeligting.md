@@ -29,4 +29,11 @@ hostname #router navn#
 
 ```
 
+```
+R1# configure terminal
+R1(config)# no logging console
+R1(config)# exit
+R1# write memory 
+
+```
 
