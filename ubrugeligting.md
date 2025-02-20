@@ -37,3 +37,13 @@ R1# write memory
 
 ```
 
+```
+configure terminal
+(config)# no ip domain-lookup
+(config)# exit
+write memory
+```
+
+
+
+
