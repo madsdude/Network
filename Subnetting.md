@@ -47,3 +47,18 @@ Lad os subnette **192.168.1.0/24** i **fire subnetværk**.
 | 4      | 192.168.1.192/26 | 192.168.1.193 | 192.168.1.254 | 192.168.1.255 |
 
 ---
+
+## 🔍 VLSM (Variable Length Subnet Masking)
+VLSM giver mulighed for at bruge **forskellige subnetmasker** inden for samme netværk for at optimere brugen af IP-adresser.
+
+Eksempel på VLSM-subnetting:
+- **192.168.1.0/26** (store netværk, 62 hosts)
+- **192.168.1.64/27** (mellemstore netværk, 30 hosts)
+- **192.168.1.96/28** (små netværk, 14 hosts)
+
+---
+
+```bash
+Router# show ip interface brief
+Router# show ip route
+```
