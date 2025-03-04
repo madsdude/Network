@@ -31,6 +31,19 @@ Subnetting er processen med at opdele et netværk i mindre subnetværk. Dette g�
 
 ---
 
-## ✏️ Hvordan Subnetter Man?
-### Trin 1: Bestem antallet af subnets eller hosts pr. subnet
-1. **Formel til subnets**:  
+## 📌 Eksempel: Subnetting af en /24-adresse
+Lad os subnette **192.168.1.0/24** i **fire subnetværk**.
+
+1. Vi har en **/24 (255.255.255.0)**, hvilket betyder, at vi har **8 host-bits**.
+2. Vi låner **2 ekstra bits**, så vi har en **/26 subnetmaske (255.255.255.192)**.
+3. **Antal subnetværk** = 2² = **4 subnetværk**.
+4. **Antal hosts pr. subnet** = 2^6 - 2 = **62 hosts**.
+
+| Subnet | Netværksadresse | Første Host | Sidste Host | Broadcast |
+|--------|---------------|------------|------------|----------|
+| 1      | 192.168.1.0/26  | 192.168.1.1 | 192.168.1.62 | 192.168.1.63 |
+| 2      | 192.168.1.64/26 | 192.168.1.65 | 192.168.1.126 | 192.168.1.127 |
+| 3      | 192.168.1.128/26 | 192.168.1.129 | 192.168.1.190 | 192.168.1.191 |
+| 4      | 192.168.1.192/26 | 192.168.1.193 | 192.168.1.254 | 192.168.1.255 |
+
+---
