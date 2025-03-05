@@ -67,10 +67,6 @@ Når du ser en kommando som:
 
 ip route 10.16.0.0 255.255.0.0 10.10.10.2
 
-yaml
-Kopiér
-Rediger
-
 Så betyder det følgende:
 
 ## 🔹 Struktur:
@@ -87,10 +83,6 @@ Så betyder det følgende:
 
 [Router] --- (10.10.10.2) ---> [Next-hop Router]
 --- (10.16.0.0/16 netværk)
-
-yaml
-Kopiér
-Rediger
 
 ### 📖 Forklaring:
 - **Routeren** lærer, at alle pakker til `10.16.0.0/16` skal sendes til `10.10.10.2`.
