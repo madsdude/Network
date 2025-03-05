@@ -61,3 +61,56 @@
     <p>Static routes er nyttige i mindre netværk, til simple routing-scenarier, eller som backup-ruter i mere komplekse netværk. De giver kontrol og stabilitet, men kræver manuel opsætning og vedligeholdelse.</p>
 </body>
 </html>
+
+# 📌 Forstå IP Route Kommandoen
+Når du ser en kommando som:
+
+ip route 10.16.0.0 255.255.0.0 10.10.10.2
+
+yaml
+Kopiér
+Rediger
+
+Så betyder det følgende:
+
+## 🔹 Struktur:
+| Parameter       | Beskrivelse |
+|----------------|------------|
+| `ip route`     | Opretter en statisk route |
+| `10.16.0.0`    | **Destination subnet** (hvilket netværk der routes til) |
+| `255.255.0.0`  | **Subnetmaske** (bestemmer netværkets størrelse) |
+| `10.10.10.2`   | **Next-hop IP** (hvor trafikken sendes hen) |
+
+---
+
+## 🖥️ Diagram over rutingen
+
+[Router] --- (10.10.10.2) ---> [Next-hop Router]
+--- (10.16.0.0/16 netværk)
+
+yaml
+Kopiér
+Rediger
+
+### 📖 Forklaring:
+- **Routeren** lærer, at alle pakker til `10.16.0.0/16` skal sendes til `10.10.10.2`.
+- Subnetmasken `255.255.0.0` betyder, at **alle IP-adresser fra `10.16.0.0` til `10.16.255.255`** er dækket.
+- `10.10.10.2` er **næste hop**, som routeren sender trafikken videre til.
+
+---
+
+## ✅ Eksempel på anvendelse
+Hvis en enhed sender en pakke til `10.16.5.25`, vil routeren:
+1. Matche `10.16.5.25` til `10.16.0.0/16`.
+2. Sende den videre til `10.10.10.2` for yderligere routing.
+
+---
+
+## 📌 Huskeregler
+- **Destination IP + Subnetmaske** bestemmer, hvilket netværk der dækkes.
+- **Next-hop IP** er routerens guide til, hvor trafikken skal hen.
+- Hvis der ikke er en specifik route, bruges standardruten (`0.0.0.0/0`).
+
+---
+
+
