@@ -19,3 +19,43 @@ Stabilitet og sikkerhed: BGP er designet til at være robust og stabil, men det 
 <H2> Opsummering </H2>
 <p> BGP er afgørende for internettets funktion, da det sikrer, at data kan rejse mellem forskellige netværk på den mest effektive måde. Det håndterer kompleks routing mellem store netværk og er en grundpille i internettets arkitektur.
 </p>
+
+R1: AS 65001, IP 192.168.12.1 (mod R2) og 192.168.13.1 (mod R3)
+
+R2: AS 65002, IP 192.168.12.2 (mod R1) og 192.168.23.2 (mod R3)
+
+R3: AS 65003, IP 192.168.13.3 (mod R1) og 192.168.23.3 (mod R2)
+
+```
+router bgp 65001
+ bgp log-neighbor-changes
+ neighbor 192.168.12.2 remote-as 65002
+ neighbor 192.168.13.3 remote-as 65003
+
+ ! Annoncering af loopback
+ network 1.1.1.1 mask 255.255.255.255
+```
+```
+router bgp 65002
+ bgp log-neighbor-changes
+ neighbor 192.168.12.1 remote-as 65001
+ neighbor 192.168.23.3 remote-as 65003
+
+ ! Annoncering af loopback
+ network 2.2.2.2 mask 255.255.255.255
+```
+```
+router bgp 65003
+ bgp log-neighbor-changes
+ neighbor 192.168.13.1 remote-as 65001
+ neighbor 192.168.23.2 remote-as 65002
+
+ ! Annoncering af loopback
+ network 3.3.3.3 mask 255.255.255.255
+
+```
+```
+interface Loopback0
+ ip address x.x.x.x 255.255.255.255
+
+```
