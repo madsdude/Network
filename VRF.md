@@ -36,7 +36,7 @@ ip vrf Red
  route-target import 100:1
 exit
 !
-! 2) Tilknyt en grænseflade til VRF "Red"
+! 2) Tilknyt et Interface til VRF "Red"
 interface GigabitEthernet0/0
  ip vrf forwarding Red
  ip address 192.168.1.1 255.255.255.0
