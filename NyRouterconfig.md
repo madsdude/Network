@@ -9,4 +9,14 @@ exit
 write memory
 ```
 
-
+```
+conf t
+hostname XXX
+no logging console
+no ip domain-lookup
+no banner login 
+no banner exec
+no banner incoming 
+exit
+write memory
+```
