@@ -46,11 +46,8 @@ Kommando:
 show standby
 ```
 Du skal kunne se:
-
 Hvem der er aktiv
-
 Hvem der er standby
-
 Virtuel IP og MAC
 
 2. Ping gateway fra en klient
