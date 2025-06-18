@@ -32,7 +32,7 @@ interface GigabitEthernet0/1
  standby 1 preempt
  standby 1 track 1 decrement 20
 ```
-🖥️ Router B (Standby)
+### 🖥️ Router B (Standby)
 ```
 interface GigabitEthernet0/1
  description LAN-side
@@ -45,7 +45,7 @@ interface GigabitEthernet0/1
  standby 1 priority 100
  standby 1 preempt
 ```
-✅ Test HSRP – virker det?
+### ✅ Test HSRP – virker det?
 1. Vis status på routerne
 Kommando:
 ```
