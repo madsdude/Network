@@ -116,9 +116,5 @@ I IP-headerens **Protocol-felt** (8-bit), der afgør hvilken protokol IP-pakken 
 
 | Version | Header Length | ... | Protocol = 89 | ... |
 
-yaml
-Kopiér
-Rediger
-
 ---
 
