@@ -87,6 +87,8 @@ OSPF bruger IP-multicast og MAC-multicast adresser til at sende beskeder på Lay
 > DR og BDR lytter på **224.0.0.6**  
 > Alle OSPF-routere lytter på **224.0.0.5**
 
+---
+
 ## 🌐 OSPF og IP Protokolnummer
 
 **OSPF (Open Shortest Path First)** bruger et særligt IP-protokolnummer, som identificeres i IP-pakkens header.
