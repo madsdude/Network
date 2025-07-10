@@ -74,3 +74,15 @@ Kun på:
 ```bash
 R1(config-if)# ip ospf priority 100
 ```
+
+## 🌐 OSPF Multicast-adresser (Layer 2 og IP)
+
+OSPF bruger IP-multicast og MAC-multicast adresser til at sende beskeder på Layer 2.
+
+| Formål             | IPv4 Multicast | MAC-adresse (Layer 2)      |
+|--------------------|----------------|-----------------------------|
+| All OSPF Routers   | 224.0.0.5      | 01:00:5E:00:00:05           |
+| All DR Routers     | 224.0.0.6      | 01:00:5E:00:00:06           |
+
+> DR og BDR lytter på **224.0.0.6**  
+> Alle OSPF-routere lytter på **224.0.0.5**
