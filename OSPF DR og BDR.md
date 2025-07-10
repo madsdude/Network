@@ -86,3 +86,37 @@ OSPF bruger IP-multicast og MAC-multicast adresser til at sende beskeder på Lay
 
 > DR og BDR lytter på **224.0.0.6**  
 > Alle OSPF-routere lytter på **224.0.0.5**
+
+## 🌐 OSPF og IP Protokolnummer
+
+**OSPF (Open Shortest Path First)** bruger et særligt IP-protokolnummer, som identificeres i IP-pakkens header.
+
+### 🔢 Protokolnummer:
+- **OSPF = 89**
+
+Dette nummer er tildelt af **IANA (Internet Assigned Numbers Authority)** og bruges til at fortælle netværksenheder, at IP-pakken indeholder en OSPF-meddelelse.
+
+---
+
+### 📦 Eksempel – Almindelige IP-protokolnumre:
+
+| Protokol | Nummer |
+|----------|--------|
+| ICMP     | 1      |
+| TCP      | 6      |
+| UDP      | 17     |
+| **OSPF** | **89** |
+
+---
+
+### 🧠 Hvor bruges det?
+I IP-headerens **Protocol-felt** (8-bit), der afgør hvilken protokol IP-pakken indeholder:
+
+| Version | Header Length | ... | Protocol = 89 | ... |
+
+yaml
+Kopiér
+Rediger
+
+---
+
