@@ -29,10 +29,12 @@ router bgp <ASN>
 ### 🔧 Peer-policies
 
 ```cisco
+router bgp 65001
 bgp peer-policy PRIMARY
   route-map PREF200 out
   description Primær linje
 
+router bgp 65001
 bgp peer-policy BACKUP
   route-map PREPEND3 out
   description Sekundær linje
