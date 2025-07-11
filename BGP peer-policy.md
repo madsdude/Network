@@ -34,11 +34,11 @@ router bgp <ASN>
 ### 🔧 Peer-policies
 
 ```cisco
-bgp peer-policy DC_POLICY_PRIMARY
+bgp peer-policy MDCH_POLICY_PRIMARY
   route-map SET-HIGH-LOCALPREF out
   description Primær linje
 
-bgp peer-policy DC_POLICY_SECONDARY
+bgp peer-policy MDCH_POLICY_SECONDARY
   route-map PREPEND-AS-PATH out
   description Sekundær linje
 ```
@@ -92,7 +92,7 @@ bgp peer-session MY-SESS
 
 router bgp 65001
  neighbor 93.42.139.2 inherit peer-session MY-SESS
- neighbor 93.42.139.2 inherit peer-policy DC_POLICY_PRIMARY
+ neighbor 93.42.139.2 inherit peer-policy MDCH_POLICY_PRIMARY
 ```
 
 ---
