@@ -59,10 +59,10 @@ route-map PREPEND-AS-PATH permit 10
 router bgp 65001
  address-family ipv4
   neighbor 93.42.139.2 remote-as 64501
-  neighbor 93.42.139.2 inherit peer-policy DC_POLICY_PRIMARY
+  neighbor 93.42.139.2 inherit peer-policy MDCH_POLICY_PRIMARY
 
   neighbor 80.91.57.1 remote-as 64502
-  neighbor 80.91.57.1 inherit peer-policy DC_POLICY_SECONDARY
+  neighbor 80.91.57.1 inherit peer-policy MDCH_POLICY_SECONDARY
 ```
 
 📌 Resultat:
