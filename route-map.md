@@ -23,39 +23,54 @@ route-map NAVN [permit | deny] SEKVENSNUMMER
 
 ---
 
-## 🧪 Eksempel 1: BGP – AS Path Prepending
+## 🧪 Eksempel 1: BGP – AS Path Prepending til sekundær linje
 
-👉 Formål: Gør en rute mindre attraktiv for indgående trafik.
+👉 Formål: Gør den sekundære internetforbindelse mindre attraktiv ved at bruge AS path prepending.
 
 ```cisco
-route-map PREPEND-ISP2 permit 10
+route-map TO-ISP1-PRIMARY permit 10
+ set local-preference 200
+
+route-map TO-ISP2-SECONDARY permit 10
  set as-path prepend 65001 65001 65001
 
 router bgp 65001
  address-family ipv4
-  neighbor 1.1.1.1 route-map PREPEND-ISP2 out
+  network 93.42.139.0 mask 255.255.255.248
+  neighbor 93.42.139.2 remote-as 64501
+  neighbor 93.42.139.2 route-map TO-ISP1-PRIMARY out
+  neighbor 80.91.57.1 remote-as 64502
+  neighbor 80.91.57.1 route-map TO-ISP2-SECONDARY out
 ```
 
-📌 Resultat: Når vi annoncerer routes til ISP2, tilføjes 3 ekstra AS-numre, hvilket gør ruten mindre attraktiv.
+📌 Resultat: ISP1 (primær linje) foretrækkes pga. høj local-preference, mens ISP2 (sekundær linje) nedprioriteres via AS path prepending.
 
 ---
 
-## 🧪 Eksempel 2: Policy-Based Routing (PBR)
+## 🧪 Eksempel 2: Policy-Based Routing (PBR) til at sende bestemt trafik ud via primær og sekundær linje
 
-👉 Formål: Tving bestemt trafik ud gennem en alternativ gateway.
+👉 Formål: Intern trafik opdeles – nogle hoste sendes ud via primær linje, andre via sekundær.
 
 ```cisco
-access-list 101 permit ip 10.0.0.100 0.0.0.0 any
+access-list 101 permit ip 10.0.0.0 0.0.0.255 any
+access-list 102 permit ip 10.0.1.0 0.0.0.255 any
 
-route-map PBR-TO-R2 permit 10
+route-map PBR-PRIMARY permit 10
  match ip address 101
  set ip next-hop 10.0.0.2
 
+route-map PBR-SECONDARY permit 10
+ match ip address 102
+ set ip next-hop 10.0.0.3
+
 interface GigabitEthernet0/1
- ip policy route-map PBR-TO-R2
+ ip policy route-map PBR-PRIMARY
+
+interface GigabitEthernet0/2
+ ip policy route-map PBR-SECONDARY
 ```
 
-📌 Resultat: Pakker fra 10.0.0.100 sendes ud via gateway `10.0.0.2` uanset default route.
+📌 Resultat: Netværk 10.0.0.0/24 går via primær gateway, og 10.0.1.0/24 via sekundær.
 
 ---
 
