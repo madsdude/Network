@@ -75,7 +75,7 @@ router bgp 65001
  neighbor 192.168.12.2 description Peer til Router2
  neighbor 192.168.12.2 route-map RM-OUT out
  neighbor 192.168.12.2 route-map RM-IN in
- network 10.1.1.0 mask 255.255.255.0
+ network 10.1.0.0 mask 255.255.0.0
 !
 ```
 
@@ -151,7 +151,7 @@ router bgp 65002
  neighbor 192.168.12.1 description Peer til Router1
  neighbor 192.168.12.1 route-map RM-OUT out
  neighbor 192.168.12.1 route-map RM-IN in
- network 10.2.2.0 mask 255.255.255.0
+ network 10.2.0.0 mask 255.255.0.0
 !
 ```
 Test af reachability og BGP session
