@@ -42,7 +42,7 @@ interface FastEthernet0/1.20
  encapsulation dot1Q 20
  ip address 10.1.20.1 255.255.255.0
 !
-interface FastEthernet0/1.20
+interface FastEthernet0/1.30
  description VLAN30
  encapsulation dot1Q 30
  ip address 10.1.30.1 255.255.255.0
@@ -110,7 +110,7 @@ interface FastEthernet0/1.20
  encapsulation dot1Q 20
  ip address 10.2.20.1 255.255.255.0
 !
-interface FastEthernet0/1.20
+interface FastEthernet0/1.30
  description VLAN30
  encapsulation dot1Q 30
  ip address 10.2.30.1 255.255.255.0
