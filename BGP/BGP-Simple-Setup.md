@@ -34,7 +34,7 @@ interface FastEthernet0/1
 !
 
 ! Prefix-list - tillad kun 10.1.1.0/24 udgående
-ip prefix-list PL-OUT seq 5 permit 10.1.1.0/24
+ip prefix-list PL-OUT seq 5 permit 10.1.0.0/16
 
 ! Route-map til udgående annoncer
 route-map RM-OUT permit 10
@@ -88,7 +88,7 @@ interface FastEthernet0/1
 !
 
 ! Prefix-list - tillad kun 10.2.2.0/24 udgående
-ip prefix-list PL-OUT seq 5 permit 10.2.2.0/24
+ip prefix-list PL-OUT seq 5 permit 10.2.0.0/16
 
 ! Route-map til udgående annoncer
 route-map RM-OUT permit 10
