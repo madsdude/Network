@@ -61,6 +61,14 @@ ip prefix-list PL-IN seq 5 permit 0.0.0.0/0 le 32
 route-map RM-IN permit 10
  match ip address prefix-list PL-IN
 
+! OSPF
+router ospf 1
+ network 10.1.0.0 0.0.255.255 area 0
+ network 192.168.12.0 0.0.0.3 area 0
+ network 10.1.10.0 0.0.0.255 area 0
+ network 10.1.20.0 0.0.0.255 area 0
+ network 10.1.30.0 0.0.0.255 area 0
+
 ! BGP konfiguration
 router bgp 65001
  neighbor 192.168.12.2 remote-as 65002
@@ -129,6 +137,14 @@ ip prefix-list PL-IN seq 5 permit 0.0.0.0/0 le 32
 route-map RM-IN permit 10
  match ip address prefix-list PL-IN
 
+! OSPF
+router ospf 1
+ network 10.2.0.0 0.0.255.255 area 0
+ network 192.168.12.0 0.0.0.3 area 0
+ network 10.2.10.0 0.0.0.255 area 0
+ network 10.2.20.0 0.0.0.255 area 0
+ network 10.2.30.0 0.0.0.255 area 0
+
 ! BGP konfiguration
 router bgp 65002
  neighbor 192.168.12.1 remote-as 65001
@@ -137,10 +153,11 @@ router bgp 65002
  neighbor 192.168.12.1 route-map RM-IN in
  network 10.2.2.0 mask 255.255.255.0
 !
+```
 Test af reachability og BGP session
 Test interface reachability
 På begge routere kan du teste reachability til peer:
-```
+
 
 ping 192.168.12.X
 (Hvor 192.168.12.X er IP-adressen på den anden routers FastEthernet0/0 interface.)
