@@ -33,13 +33,13 @@ interface FastEthernet0/1
  speed auto
 !
 interface FastEthernet0/1.10
- description VLAN10
+ description VLAN10 ADMIN/DATA
  no shutdown
  encapsulation dot1Q 10
  ip address 10.1.10.1 255.255.255.0
 !
 interface FastEthernet0/1.20
- description VLAN20
+ description VLAN20 VOICE
  no shutdown
  encapsulation dot1Q 20
  ip address 10.1.20.1 255.255.255.0
@@ -112,13 +112,13 @@ interface FastEthernet0/1
  speed auto
 !
 interface FastEthernet0/1.10
- description VLAN10
+ description VLAN10 ADMIN/DATA
  no shutdown
  encapsulation dot1Q 10
  ip address 10.2.10.1 255.255.255.0
 !
 interface FastEthernet0/1.20
- description VLAN20
+ description VLAN20 VOICE
  no shutdown
  encapsulation dot1Q 20
  ip address 10.2.20.1 255.255.255.0
