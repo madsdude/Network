@@ -174,8 +174,9 @@ For at se status på BGP sessionen:
 ```plaintext
 
 show ip bgp summary
-For detaljer om BGP nabo:
 ```
+For detaljer om BGP nabo:
+
 
 ```plaintext
 
