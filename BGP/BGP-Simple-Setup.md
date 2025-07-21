@@ -33,7 +33,7 @@ interface FastEthernet0/1
  speed auto
 !
 
-! Prefix-list - tillad kun 10.1.1.0/24 udgående
+! Prefix-list - tillad kun 10.1.0.0/16 udgående
 ip prefix-list PL-OUT seq 5 permit 10.1.0.0/16
 
 ! Route-map til udgående annoncer
@@ -87,7 +87,7 @@ interface FastEthernet0/1
  speed auto
 !
 
-! Prefix-list - tillad kun 10.2.2.0/24 udgående
+! Prefix-list - tillad kun 10.2.0.0/16 udgående
 ip prefix-list PL-OUT seq 5 permit 10.2.0.0/16
 
 ! Route-map til udgående annoncer
