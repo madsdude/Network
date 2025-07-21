@@ -32,6 +32,20 @@ interface FastEthernet0/1
  duplex auto
  speed auto
 !
+interface FastEthernet0/1.10
+ description VLAN10
+ encapsulation dot1Q 10
+ ip address 10.1.10.1 255.255.255.0
+!
+interface FastEthernet0/1.20
+ description VLAN20
+ encapsulation dot1Q 20
+ ip address 10.1.20.1 255.255.255.0
+!
+interface FastEthernet0/1.20
+ description VLAN30
+ encapsulation dot1Q 30
+ ip address 10.1.30.1 255.255.255.0
 
 ! Prefix-list - tillad kun 10.1.0.0/16 udgående
 ip prefix-list PL-OUT seq 5 permit 10.1.0.0/16
@@ -86,6 +100,20 @@ interface FastEthernet0/1
  duplex auto
  speed auto
 !
+interface FastEthernet0/1.10
+ description VLAN10
+ encapsulation dot1Q 10
+ ip address 10.2.10.1 255.255.255.0
+!
+interface FastEthernet0/1.20
+ description VLAN20
+ encapsulation dot1Q 20
+ ip address 10.2.20.1 255.255.255.0
+!
+interface FastEthernet0/1.20
+ description VLAN30
+ encapsulation dot1Q 30
+ ip address 10.2.30.1 255.255.255.0
 
 ! Prefix-list - tillad kun 10.2.0.0/16 udgående
 ip prefix-list PL-OUT seq 5 permit 10.2.0.0/16
