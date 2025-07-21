@@ -28,7 +28,7 @@ interface FastEthernet0/0
 !
 interface FastEthernet0/1
  no ip address
- shutdown
+ no shutdown
  duplex auto
  speed auto
 !
