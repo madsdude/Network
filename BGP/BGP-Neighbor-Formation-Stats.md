@@ -23,7 +23,7 @@ BGP-dannelsen foregår i 6 trin:
 
 ## 📡 Wireshark: Eksempel på Neighbor Formation
 
-![Wireshark BGP](b7e45e29-6aa8-4c8c-9c54-8848b89e39e2.png)
+<img width="913" height="266" alt="image" src="https://github.com/user-attachments/assets/1546bf29-7fcb-413e-948d-101d1909f9ed" />
 
 ### Trin-for-trin fra billedet:
 
