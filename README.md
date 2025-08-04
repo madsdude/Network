@@ -8,4 +8,4 @@
 
 **Og hvis der er noget, der bør uddybes: en AI er fin, men et menneske er nu engang nemmere at tale med — så skriv endelig!**
 
-**Mail-Madschurchill@gmail.com**
+**Mail** **Madschurchill@gmail.com**
