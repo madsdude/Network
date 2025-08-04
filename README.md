@@ -1,16 +1,11 @@
-# Network
+# 🧠 Mine Netværksnoter
 
-### Repository for networking notes
+**Hej og velkommen!**
 
-It's focused on Cisco configurations and brief explanations.
+**Her finder du alle mine netværksnoter — både med eksempler og forklaringer.**
 
-*  [SSH](SSH.md)
-*  [NAT](NAT.md)
-*  [Vlan's](Vlans.md)
-*  [LACP](LACP.md)
-*  [IPSES/VPN](IPses-VPN.md)
-*  [OSPF](OSPF.md)
-*  [DHCP](DHCP.md)
-*  [HSRP](HSRP.md)
-*  [Subinterface](Subinterface.md)
+**Hvis du synes, der mangler noget, er du meget velkommen til at kontakte mig og efterspørge det.**
 
+**Og hvis der er noget, der bør uddybes: en AI er fin, men et menneske er nu engang nemmere at tale med — så skriv endelig!**
+
+**Mail-Madschurchill@gmail.com**
