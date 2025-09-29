@@ -1,1 +1,6 @@
 nano ~/.config/GNS3/gns3_server.conf
+
+
+[Server]
+host = 10.129.10.101
+port = 3080
