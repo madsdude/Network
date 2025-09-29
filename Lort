@@ -1,9 +1,35 @@
-nano ~/.config/GNS3/gns3_server.conf
+1. Stop GNS3 service
+
+Hvis den kører som service:
+
+sudo systemctl stop gns3
+sudo systemctl disable gns3
 
 
-[Server]
-host = 10.129.10.101
-port = 3080
+Hvis I bare har startet den manuelt:
+
+pkill gns3server
+
+🔹 2. Afinstaller GNS3 pakker
+
+Alt efter hvordan I installerede det:
+
+Hvis via apt (Ubuntu/Debian):
+sudo apt-get remove --purge gns3* dynamips ubridge vpcs
+
+Hvis via pip:
+pip3 uninstall gns3-server gns3-gui
+
+Hvis via snap:
+sudo snap remove gns3
+
+🔹 3. Slet resterende filer og config
+rm -rf ~/.config/GNS3
+rm -rf ~/.local/share/gns3
+sudo rm -rf /etc/gns3
 
 
-nano ~/.config/GNS3/gns3_server.conf
+Hvis I har lavet en bruger “gns3”, og den kun er til det formål:
+
+sudo deluser gns3
+sudo rm -rf /home/gns3
