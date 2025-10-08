@@ -31,7 +31,6 @@ conf t
 ip route 9.9.9.9 255.255.255.255 Null0
 router bgp 65010
  bgp log-neighbor-changes
- ! eBGP-nabo til R2 er allerede sat (10.0.12.2)
  network 9.9.9.9 mask 255.255.255.255
 end
 ```
@@ -42,7 +41,6 @@ conf t
 ip route 9.9.9.9 255.255.255.255 Null0
 router bgp 65040
  bgp log-neighbor-changes
- ! eBGP-nabo til R2 er allerede sat (10.0.24.2)
  network 9.9.9.9 mask 255.255.255.255
 end
 ```
