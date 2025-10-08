@@ -42,16 +42,22 @@ Du bør nu se to paths: én via 10.0.23.3 (R3/iBGP) og én via 10.0.24.4 (R4/eBG
 Som udgangspunkt vinder ofte eBGP-vejen, hvis alt andet er ens
 
 ```
-R4#show ip bgp 3.3.3.3
-BGP routing table entry for 3.3.3.3/32, version 5
-Paths: (1 available, best #1, table default, RIB-failure(17))
-  Not advertised to any peer
+R2#show ip bgp 3.3.3.3
+BGP routing table entry for 3.3.3.3/32, version 3
+Paths: (2 available, best #2, table default)
+  Advertised to update-groups:
+     1         
   Refresh Epoch 1
-  65020
-    10.0.24.2 from 10.0.24.2 (2.2.2.2)
-      Origin IGP, localpref 100, valid, external, best
+  65040
+    10.0.24.4 from 10.0.24.4 (10.0.24.4)
+      Origin IGP, metric 0, localpref 100, valid, external
+      rx pathid: 0, tx pathid: 0
+  Refresh Epoch 1
+  Local
+    10.0.23.3 from 10.0.23.3 (3.3.3.3)
+      Origin IGP, metric 0, localpref 100, valid, internal, best
       rx pathid: 0, tx pathid: 0x0
-R4#
+R2#
 ```
 
 
