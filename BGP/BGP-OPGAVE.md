@@ -21,3 +21,103 @@ R3: 3.3.3.0/24
 
 R4: 4.4.4.0/24
 
+
+# R1
+
+```
+conf t
+
+hostname R1
+
+interface GigabitEthernet0/0
+ip address 10.0.12.1 255.255.255.252
+no shutdown 
+
+interface loopback 1 
+ip address 1.1.1.1 255.255.255.255
+
+router bgp 65010
+ bgp log-neighbor-changes
+ neighbor 10.0.12.2 remote-as 65020
+ network 1.1.1.1 mask 255.255.255.255
+```
+
+# R2 
+
+```
+conf t
+
+hostname R2
+
+interface GigabitEthernet0/0
+ip address 10.0.12.2 255.255.255.252
+no shutdown 
+
+interface GigabitEthernet0/1
+ip address 10.0.23.2 255.255.255.248
+no shutdown 
+
+interface GigabitEthernet0/2
+ip address 10.0.24.2 255.255.255.248
+no shutdown 
+
+interface loopback 1 
+ip address 2.2.2.2 255.255.255.255
+
+router bgp 65020
+ bgp log-neighbor-changes
+ neighbor 10.0.12.1 remote-as 65010
+ neighbor 10.0.24.4 remote-as 65040
+ neighbor 10.0.23.3 remote-as 65020
+ neighbor 10.0.23.3 update-source 10.0.23.2
+ neighbor 10.0.23.3 next-hop-self
+ 
+router ospf 1
+ network 10.0.23.0 0.0.0.3 area 0
+
+```
+
+# R3 
+```
+conf t
+
+hostname R3
+
+interface GigabitEthernet0/1
+ip address 10.0.23.3 255.255.255.248
+no shutdown 
+
+interface loopback 1 
+ip address 3.3.3.3 255.255.255.255
+
+router bgp 65020
+ bgp log-neighbor-changes
+ neighbor 10.0.23.2 remote-as 65020
+ neighbor 10.0.23.2 update-source 10.0.23.3
+ network 3.3.3.3 mask 255.255.255.255
+ 
+
+router ospf 1
+ network 10.0.23.0 0.0.0.3 area 0
+```
+# R4
+```
+conf t
+
+hostname R4
+
+interface GigabitEthernet0/2
+ip address 10.0.24.4 255.255.255.248
+no shutdown 
+
+interface loopback1
+ ip address 4.4.4.4 255.255.255.255
+
+router bgp 65040
+ bgp log-neighbor-changes
+ neighbor 10.0.24.2 remote-as 65020
+ network 4.4.4.4 mask 255.255.255.255
+
+```
+
+
