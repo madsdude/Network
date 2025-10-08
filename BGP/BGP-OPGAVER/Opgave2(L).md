@@ -143,6 +143,7 @@ conf t
 router bgp 65020
  no neighbor 10.0.12.1 route-map LP_FROM_R1 in
  no neighbor 10.0.12.1 route-map LP_FROM_R1_ONLY9 in
+ no route-map LP_FROM_R1 permit 10
 end
 ```
 
