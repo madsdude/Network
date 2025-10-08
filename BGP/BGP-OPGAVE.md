@@ -3,7 +3,7 @@
 
 <img width="838" height="510" alt="image" src="https://github.com/user-attachments/assets/d01b31e7-b210-421a-8a8b-f76fa097a8f2" />
 
-# IP-plan (forslag)
+# IP-plan 
 
 R1–R2: 10.0.12.0/30 (R1=10.0.12.1, R2=10.0.12.2)
 
