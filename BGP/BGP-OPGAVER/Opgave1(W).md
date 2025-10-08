@@ -24,6 +24,13 @@ Formål: Gør så R2 også modtager 3.3.3.3/32 fra R4 (eBGP), så der er to path
 conf t
 ! Lav en local “kilde” til præfikset, så BGPs network-kommando kan matche RIB
 ip route 3.3.3.3 255.255.255.255 Null0
+
+router bgp 65040
+ bgp log-neighbor-changes
+ ! Du har allerede eBGP-naboen til R2 (10.0.24.2)
+ network 3.3.3.3 mask 255.255.255.255
+end
+
 ```
 
 Tjek på R2 (efter et par sekunder / eller kør soft reset):
