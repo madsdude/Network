@@ -132,9 +132,15 @@ show ip route 3.3.3.3
 
 **På R2 (fjern Weight-policy):**
 ```cisco
+
 conf t
 router bgp 65020
  no neighbor 10.0.23.3 route-map PREFER_R3_WEIGHT in
+
+no ip prefix-list NET_33 seq 5 permit 3.3.3.3/32
+
+no route-map PREFER_R3_WEIGHT permit 10
+
 end
 ```
 
