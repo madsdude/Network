@@ -11,7 +11,7 @@
 
     interface range GigabitEthernet1/0/1-48 
     source template VLAN10 
-    exit `
+    exit
 
 Forklaring af kommandoerne template [navn]: Starter template-mode. Alt du skriver herunder gemmes som en makro.
 
