@@ -1,104 +1,145 @@
 # 🧠 Mine Netværksnoter
 
-**Hej og velkommen!**
+------------------------------------------------------------------------
 
-**Her finder du alle mine netværksnoter — både med eksempler og forklaringer.**
+## Hej og velkommen!
 
-**Hvis du synes, der mangler noget, er du meget velkommen til at kontakte mig og efterspørge det.**
+Her finder du alle mine netværksnoter --- både med eksempler og
+forklaringer.
 
-**Og hvis der er noget, der bør uddybes: en AI er fin, men et menneske er nu engang nemmere at tale med — så skriv endelig!**
+Hvis du synes, der mangler noget, er du meget velkommen til at kontakte
+mig og efterspørge det.
 
-**Mail** **Madschurchill@gmail.com**
+Og hvis der er noget, der bør uddybes:\
+En AI er fin, men et menneske er nu engang nemmere at tale med --- så
+skriv endelig!
 
-**The Twelve Networking Truths** 
+📧 **Mail:** <Madschurchill@gmail.com>
 
-***RFC1925***
+------------------------------------------------------------------------
 
+# The Twelve Networking Truths
 
-[1] Introduction
+### *RFC 1925*
 
-   This Request for Comments (RFC) provides information about the
+------------------------------------------------------------------------
 
-   fundamental truths underlying all networking. These truths apply to
+## 1. Introduction
 
-   networking in general, and are not limited to TCP/IP, the Internet,
+This Request for Comments (RFC) provides information about the
+fundamental truths underlying all networking.\
+These truths apply to networking in general and are not limited to
+TCP/IP, the Internet, or any other subset of the networking community.
 
-   or any other subset of the networking community.
+------------------------------------------------------------------------
 
-[2] The Fundamental Truths
+## 2. The Fundamental Truths
 
-   (1)  It Has To Work.
+### (1) It Has To Work.
 
-   (2)  No matter how hard you push and no matter what the priority,
+------------------------------------------------------------------------
 
-        you can't increase the speed of light.
+### (2) You Can't Beat Physics
 
-        (2a) (corollary). No matter how hard you try, you can't make a
+No matter how hard you push and no matter what the priority,\
+you can't increase the speed of light.
 
-             baby in much less than 9 months. Trying to speed this up
+#### (2a) Corollary
 
-             *might* make it slower, but it won't make it happen any
+No matter how hard you try, you can't make a baby in much less than 9
+months.\
+Trying to speed this up *might* make it slower, but it won't make it
+happen any quicker.
 
-             quicker.
+------------------------------------------------------------------------
 
-   (3)  With sufficient thrust, pigs fly just fine. However, this is
+### (3) With Sufficient Thrust, Pigs Fly
 
-        not necessarily a good idea. It is hard to be sure where they
+With sufficient thrust, pigs fly just fine.\
+However, this is not necessarily a good idea.
 
-        are going to land, and it could be dangerous sitting under them
+It is hard to be sure where they are going to land,\
+and it could be dangerous sitting under them as they fly overhead.
 
-        as they fly overhead.
+------------------------------------------------------------------------
 
-   (4)  Some things in life can never be fully appreciated nor
+### (4) Experience Matters
 
-        understood unless experienced firsthand. Some things in
+Some things in life can never be fully appreciated nor understood unless
+experienced firsthand.
 
-        networking can never be fully understood by someone who neither
+Some things in networking can never be fully understood by someone who
+neither builds commercial networking equipment nor runs an operational
+network.
 
-        builds commercial networking equipment nor runs an operational
+------------------------------------------------------------------------
 
-        network.
+### (5) Aggregating Problems
 
-   (5)  It is always possible to aglutenate multiple separate problems
+It is always possible to agglutinate multiple separate problems into a
+single complex interdependent solution.
 
-        into a single complex interdependent solution. In most cases
+In most cases, this is a bad idea.
 
-        this is a bad idea.
+------------------------------------------------------------------------
 
-   (6)  It is easier to move a problem around (for example, by moving
+### (6) Moving Problems Is Easier Than Solving Them
 
-        the problem to a different part of the overall network
+It is easier to move a problem around (for example, by moving the
+problem to a different part of the overall network architecture) than it
+is to solve it.
 
-        architecture) than it is to solve it.
+#### (6a) Corollary
 
-        (6a) (corollary). It is always possible to add another level of
+It is always possible to add another level of indirection.
 
-             indirection.
+------------------------------------------------------------------------
 
-   (7)  It is always something
+### (7) It Is Always Something
 
-        (7a) (corollary). Good, Fast, Cheap: Pick any two (you can't
+#### (7a) Corollary
 
-            have all three).
+Good, Fast, Cheap: Pick any two.\
+You can't have all three.
 
-   (8)  It is more complicated than you think.
+------------------------------------------------------------------------
 
-   (9)  For all resources, whatever it is, you need more.
+### (8) It Is More Complicated Than You Think
 
-       (9a) (corollary) Every networking problem always takes longer to
+------------------------------------------------------------------------
 
-            solve than it seems like it should.
+### (9) You Always Need More Resources
 
-   (10) One size never fits all.
+For all resources --- whatever it is --- you need more.
 
-   (11) Every old idea will be proposed again with a different name and
+#### (9a) Corollary
 
-        a different presentation, regardless of whether it works.
+Every networking problem always takes longer to solve than it seems like
+it should.
 
-        (11a) (corollary). See rule 6a.
+------------------------------------------------------------------------
 
-   (12) In protocol design, perfection has been reached not when there
+### (10) One Size Never Fits All
 
-        is nothing left to add, but when there is nothing left to take
+------------------------------------------------------------------------
 
-        away.
+### (11) Old Ideas Never Die
+
+Every old idea will be proposed again with a different name and a
+different presentation, regardless of whether it works.
+
+#### (11a) Corollary
+
+See rule 6a.
+
+------------------------------------------------------------------------
+
+### (12) Simplicity Is Perfection
+
+In protocol design, perfection has been reached not when there is
+nothing left to add,\
+but when there is nothing left to take away.
+
+------------------------------------------------------------------------
+
+*Last updated: 2026*
