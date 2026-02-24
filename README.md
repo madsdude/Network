@@ -10,8 +10,8 @@
 
 **Mail** **Madschurchill@gmail.com**
 
-** The Twelve Networking Truths
-***RFC1925
+** The Twelve Networking Truths ** 
+***RFC1925***
 
 
 [1] Introduction
