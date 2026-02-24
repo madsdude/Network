@@ -11,66 +11,90 @@
 **Mail** **Madschurchill@gmail.com**
 
 
-[1](https://www.rfc-editor.org/rfc/rfc1925.html#section-1). Introduction
+[1] Introduction
 
-   This Request for Comments (RFC) provides information about the
-   fundamental truths underlying all networking. These truths apply to
-   networking in general, and are not limited to TCP/IP, the Internet,
-   or any other subset of the networking community.
+   This Request for Comments (RFC) provides information about the
 
-[2](https://www.rfc-editor.org/rfc/rfc1925.html#section-2). The Fundamental Truths
+   fundamental truths underlying all networking. These truths apply to
 
-   (1)  It Has To Work.
+   networking in general, and are not limited to TCP/IP, the Internet,
 
-   (2)  No matter how hard you push and no matter what the priority,
-        you can't increase the speed of light.
+   or any other subset of the networking community.
 
-        (2a) (corollary). No matter how hard you try, you can't make a
-             baby in much less than 9 months. Trying to speed this up
-             *might* make it slower, but it won't make it happen any
-             quicker.
+[2] The Fundamental Truths
 
-   (3)  With sufficient thrust, pigs fly just fine. However, this is
-        not necessarily a good idea. It is hard to be sure where they
-        are going to land, and it could be dangerous sitting under them
-        as they fly overhead.
+   (1)  It Has To Work.
 
-   (4)  Some things in life can never be fully appreciated nor
-        understood unless experienced firsthand. Some things in
-        networking can never be fully understood by someone who neither
-        builds commercial networking equipment nor runs an operational
-        network.
+   (2)  No matter how hard you push and no matter what the priority,
 
-   (5)  It is always possible to aglutenate multiple separate problems
-        into a single complex interdependent solution. In most cases
-        this is a bad idea.
+        you can't increase the speed of light.
 
-   (6)  It is easier to move a problem around (for example, by moving
-        the problem to a different part of the overall network
-        architecture) than it is to solve it.
+        (2a) (corollary). No matter how hard you try, you can't make a
 
-        (6a) (corollary). It is always possible to add another level of
-             indirection.
+             baby in much less than 9 months. Trying to speed this up
 
-   (7)  It is always something
+             *might* make it slower, but it won't make it happen any
 
-        (7a) (corollary). Good, Fast, Cheap: Pick any two (you can't
-            have all three).
+             quicker.
 
-   (8)  It is more complicated than you think.
+   (3)  With sufficient thrust, pigs fly just fine. However, this is
 
-   (9)  For all resources, whatever it is, you need more.
+        not necessarily a good idea. It is hard to be sure where they
 
-       (9a) (corollary) Every networking problem always takes longer to
-            solve than it seems like it should.
+        are going to land, and it could be dangerous sitting under them
 
-   (10) One size never fits all.
+        as they fly overhead.
 
-   (11) Every old idea will be proposed again with a different name and
-        a different presentation, regardless of whether it works.
+   (4)  Some things in life can never be fully appreciated nor
 
-        (11a) (corollary). See rule 6a.
+        understood unless experienced firsthand. Some things in
 
-   (12) In protocol design, perfection has been reached not when there
-        is nothing left to add, but when there is nothing left to take
-        away.
+        networking can never be fully understood by someone who neither
+
+        builds commercial networking equipment nor runs an operational
+
+        network.
+
+   (5)  It is always possible to aglutenate multiple separate problems
+
+        into a single complex interdependent solution. In most cases
+
+        this is a bad idea.
+
+   (6)  It is easier to move a problem around (for example, by moving
+
+        the problem to a different part of the overall network
+
+        architecture) than it is to solve it.
+
+        (6a) (corollary). It is always possible to add another level of
+
+             indirection.
+
+   (7)  It is always something
+
+        (7a) (corollary). Good, Fast, Cheap: Pick any two (you can't
+
+            have all three).
+
+   (8)  It is more complicated than you think.
+
+   (9)  For all resources, whatever it is, you need more.
+
+       (9a) (corollary) Every networking problem always takes longer to
+
+            solve than it seems like it should.
+
+   (10) One size never fits all.
+
+   (11) Every old idea will be proposed again with a different name and
+
+        a different presentation, regardless of whether it works.
+
+        (11a) (corollary). See rule 6a.
+
+   (12) In protocol design, perfection has been reached not when there
+
+        is nothing left to add, but when there is nothing left to take
+
+        away.
