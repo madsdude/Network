@@ -59,14 +59,14 @@ Hele stakkens switches kan opgraderes på én gang ved hjælp af én switch (typ
 archive download-sw /overwrite /reload tftp://[server-ip]/[image-name]
 ```
 
-### 1\. Find en specifik switch i en stack
+### 1\. Find en specifik switch i en stack 9300LM
 
 Hvis du sidder ved terminalen og vil finde den fysiske switch, der f.eks. er "Switch 3" i din stack:
 
 Bash
 
 ```
-hw-module switch 3 beacon on
+hw-module beacon on slot 1 on 
 
 ```
 
@@ -77,7 +77,7 @@ Husk altid at slukke det, når du er færdig, så dine kolleger ikke tror, der e
 Bash
 
 ```
-hw-module switch 3 beacon off
+hw-module beacon on slot 1 off
 ```
 
 ### Bemærkninger
