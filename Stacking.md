@@ -66,7 +66,7 @@ Hvis du sidder ved terminalen og vil finde den fysiske switch, der f.eks. er "Sw
 Bash
 
 ```
-hw-module beacon on slot 1 on 
+hw-module beacon slot 1 on 
 
 ```
 
@@ -77,7 +77,7 @@ Husk altid at slukke det, når du er færdig, så dine kolleger ikke tror, der e
 Bash
 
 ```
-hw-module beacon on slot 1 off
+hw-module beacon slot 1 off
 ```
 
 ### Bemærkninger
