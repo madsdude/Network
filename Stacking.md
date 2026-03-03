@@ -59,6 +59,27 @@ Hele stakkens switches kan opgraderes på én gang ved hjælp af én switch (typ
 archive download-sw /overwrite /reload tftp://[server-ip]/[image-name]
 ```
 
+### 1\. Find en specifik switch i en stack
+
+Hvis du sidder ved terminalen og vil finde den fysiske switch, der f.eks. er "Switch 3" i din stack:
+
+Bash
+
+```
+hw-module switch 3 beacon on
+
+```
+
+### 2\. Sluk for lyset igen
+
+Husk altid at slukke det, når du er færdig, så dine kolleger ikke tror, der er en kritisk systemfejl i gang.
+
+Bash
+
+```
+hw-module switch 3 beacon off
+```
+
 ### Bemærkninger
 - Det er vigtigt at planlægge for redundans og kabel-layout, så stakken stadig er funktionsdygtig, hvis en forbindelse skulle fejle.
 - Stacking er typisk tilgængelig på specifikke modeller af Cisco-switches, så det er godt at kontrollere, om din model understøtter dette.
