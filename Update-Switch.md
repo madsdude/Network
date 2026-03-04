@@ -49,10 +49,6 @@ Denne guide beskriver, hvordan du opdaterer en Cisco-switch ved hjælp af en USB
    write
    install add file flash:cat9k_iosxe.17.15.03.SPA.bin activate commit prompt-level none
    ```
-   **Eksempel:**  
-   ```sh
-   boot system flash:c2960x-universalk9-mz.152-7.E2.bin
-   ```
 
 ---
 
