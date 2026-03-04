@@ -52,9 +52,9 @@ Denne guide beskriver, hvordan du opdaterer en Cisco-switch ved hjælp af en USB
 
 3. To finish off, remove inactive/old images that are not used anymore
 
-```sh
-install remove inactive
- ```
+   ```sh
+   install remove inactive
+    ```
  
 ---
 
