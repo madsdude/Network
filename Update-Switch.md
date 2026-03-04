@@ -50,6 +50,12 @@ Denne guide beskriver, hvordan du opdaterer en Cisco-switch ved hjælp af en USB
    install add file flash:cat9k_iosxe.17.15.03.SPA.bin activate commit prompt-level none
    ```
 
+3. To finish off, remove inactive/old images that are not used anymore
+
+```sh
+install remove inactive
+ ```
+ 
 ---
 
 ## **5. Gem ændringer og genstart switchen**
