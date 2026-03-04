@@ -46,9 +46,8 @@ Denne guide beskriver, hvordan du opdaterer en Cisco-switch ved hjælp af en USB
    ```
 2. Indstil switchen til at boote på den nye firmware:  
    ```sh
-   conf t
-   boot system flash:<filnavn>.bin
-   exit
+   write
+   install add file flash:cat9k_iosxe.17.15.03.SPA.bin activate commit prompt-level none
    ```
    **Eksempel:**  
    ```sh
