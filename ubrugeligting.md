@@ -44,6 +44,7 @@ configure terminal
 write memory
 ```
 
-
-
-
+```
+test cable-diagnostics tdr interface gi1/0/10
+show cable-diagnostics tdr interface gi1/0/10
+```
